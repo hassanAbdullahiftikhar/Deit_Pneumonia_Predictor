@@ -1,11 +1,25 @@
-gradio
-torch
-torchvision
-numpy
-opencv-python
-Pillow
-transformers
-grad-cam
-fastapi
-uvicorn
-python-multipart
+# Core ML
+torch==2.5.1+cu124
+torchvision==0.20.1+cu124
+
+# HuggingFace
+transformers==4.52.2
+datasets==3.6.0
+evaluate==0.4.3
+accelerate==1.6.0
+
+# Training utilities
+scikit-learn==1.6.1
+numpy==1.26.4
+
+# Grad-CAM
+grad-cam==1.5.5
+opencv-python==4.11.0.86
+
+# Web app
+fastapi==0.136.1
+uvicorn==0.27.1
+python-multipart==0.0.27
+
+# Image handling
+Pillow==11.2.1
