@@ -1,0 +1,11 @@
+gradio
+torch
+torchvision
+numpy
+opencv-python
+Pillow
+transformers
+grad-cam
+fastapi
+uvicorn
+python-multipart
