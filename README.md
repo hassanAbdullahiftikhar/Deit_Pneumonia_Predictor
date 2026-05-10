@@ -1,14 +1,15 @@
-# 🫁 Pneumonia Detection from Chest X-Ray
+# PneumoScan AI — Advanced Pneumonia Detection
 
-A deep learning application for screening pneumonia in chest X-rays using **Data-efficient Image Transformers (DeiT)**. This tool provides both classification results and visual explainability through **Grad-CAM** overlays, highlighting the regions of the lungs that influenced the model's decision.
+A professional, clinical-grade deep learning application for screening pneumonia in chest X-rays using **Data-efficient Image Transformers (DeiT)**. This tool provides both high-accuracy classification and visual explainability through **Grad-CAM** attention maps.
 
-## 🚀 Features
-- **Accurate Classification:** Identifies "Normal" vs. "Pneumonia" cases.
-- **Visual Explainability:** Generates Grad-CAM heatmaps to visualize the model's focus areas.
-- **Web Interface:** Easy-to-use UI built with Gradio.
-- **Transformer-based:** Uses state-of-the-art Vision Transformers (DeiT).
+## Features
+- **Accurate Classification:** Identifies "Normal" vs. "Pneumonia" cases with high confidence.
+- **Visual Explainability:** Generates Grad-CAM heatmaps to visualize the model's focus areas within the lungs.
+- **Premium Dashboard:** A custom, modern medical UI designed for clarity and rapid analysis.
+- **FastAPI Backend:** High-performance inference engine serving the custom frontend.
+- **Transformer-based:** Leverages state-of-the-art Vision Transformers (DeiT).
 
-## 🛠️ Installation
+## Installation
 
 Follow these steps to set up the environment and run the application:
 
@@ -19,7 +20,6 @@ cd Deit_Pneumonia_Predictor
 ```
 
 ### 2. Create a Virtual Environment
-It is recommended to use a virtual environment to manage dependencies:
 ```bash
 # Windows
 python -m venv venv
@@ -35,28 +35,30 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 💻 Usage
+## Usage
 
-### Running the Web App
-Execute the following command to launch the Gradio interface:
+### Running the Application
+Execute the following command to launch the FastAPI server and the premium dashboard:
 ```bash
 python app.py
 ```
-Once started, the application will provide a local URL (e.g., `http://127.0.0.1:7860`) where you can upload X-ray images for analysis.
+Once started, the application will be available at:
+**http://localhost:8000**
 
-## 🧠 Model Information
+## Model Information
 - **Architecture:** `DeiT-base-patch16-224` (Data-efficient Image Transformer)
 - **Dataset:** Fine-tuned on the Kermany Chest X-Ray dataset.
 - **Reference:** Singh et al., *Scientific Reports*, January 2024.
 
-## 📂 Project Structure
-- `app.py`: Main application script (Gradio UI + Inference logic).
+## Project Structure
+- `app.py`: FastAPI backend server (Inference logic + API endpoints).
+- `frontend/`: Custom web interface (HTML, CSS, JavaScript).
 - `requirements.txt`: Python package dependencies.
-- `deit-pneumonia-papersplit/`: Local directory containing the fine-tuned model weights and configuration.
+- `deit-pneumonia-papersplit/`: Local directory containing the fine-tuned model weights.
 - `sample_xrays/`: Folder containing example images for testing.
-- `testing.ipynb`: Jupyter notebook for model evaluation and experimentation.
+- `walkthrough.md`: Detailed overview of the latest implementation round.
 
-## ⚠️ Disclaimer
+## Disclaimer
 **This tool is for research and educational purposes only.** It is not a certified medical device and should not be used for clinical diagnosis or as a substitute for professional medical advice.
 
 ---
